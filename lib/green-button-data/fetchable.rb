@@ -65,7 +65,7 @@ module GreenButtonData
       # ReadingType.find("https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1", token: "12345678-1024-2048-abcdef001234") # override global config and use specific url
       def find(id = nil, options = nil)
         # If +id+ argument is a URL, set the url
-        url = if id =~ /\A#{URI::regexp}\z/
+        url = if id.to_s =~ /\A#{URI::regexp}\z/
           id
         else
           path_prefix = url_path_prefix url_options(options)
