@@ -1,7 +1,8 @@
 source 'https://rubygems.org/'
 
 gemspec
-
+gem 'base64'
+gem 'bigdecimal'
 group :development do
   gem 'guard-rspec', require: false
 end

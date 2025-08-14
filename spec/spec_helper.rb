@@ -1,13 +1,15 @@
+require 'base64'
+require 'bigdecimal'
 require 'simplecov'
 
-SimpleCov.start do
-  add_filter "/spec/"
-end
+# SimpleCov.start do
+#   add_filter "/spec/"
+# end
 
-if ENV['CI'] == 'true'
-  require 'simplecov-cobertura'
-  SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
-end
+# if ENV['CI'] == 'true'
+#   require 'simplecov-cobertura'
+#   SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
+# end
 
 require File.expand_path(File.dirname(__FILE__) + '/../lib/green-button-data')
 require 'webmock/rspec'
